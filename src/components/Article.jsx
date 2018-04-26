@@ -18,7 +18,14 @@ class Article extends Component {
     render() {
         return (
             <div className="article-wrapper container">
-                {this.renderParagraphs()}
+                {this.props.articleInfo.paragraphs.length
+                    ? this.renderParagraphs()
+                    : <div className="jumbotron jumbotron-fluid">
+                        <div className="container">
+                            <h1 className="display-7">There is no paragraphs to show</h1>
+                            <p className="lead">Probably you provide incorect articleURL. Pass url with following format 'http://localhost:3000?articleURL=http://www.dagbladet.no/kjendis/supermodellen-ble-beskyldt-for-a-ikke-tipse-etter-et-barbesok-na-svarer-hun-pa-kritikken/68573788' and try again</p>
+                        </div>
+                    </div>}
             </div>
         )
     }
