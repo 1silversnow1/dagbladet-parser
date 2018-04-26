@@ -1,0 +1,3 @@
+export const ON_LOAD_DASHBOARD_INFO = Symbol('ON_LOAD_DASHBOARD_INFO');
+export const ON_APPROVE_REMARK = Symbol('ON_APPROVE_REMARK');
+export const ON_DELETE_REMARK = Symbol('ON_DELETE_REMARK');

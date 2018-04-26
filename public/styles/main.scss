@@ -1,0 +1,100 @@
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "../../node_modules/bootstrap/scss/bootstrap-grid";
+@import "../../node_modules/bootstrap/scss/bootstrap-reboot";
+
+* {
+  box-sizing: border-box;
+}
+
+.hidden {
+  display: none;
+}
+
+.bold {font-weight: bold;}
+
+.notif__container {
+  right: 20px;
+  left: auto;
+}
+
+.navbar {
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  background-color: #f8f9fa;
+
+  .navbar-brand {font-weight: bold;}
+}
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(255,255,255, .5);
+
+  &__indicator {
+    font-size: 24px;
+  }
+
+}
+
+.paragraph-card {
+  margin-bottom: 20px;
+  .card-header {
+    text-transform: capitalize;
+  }
+  .button-edit {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    .btn {width: 100%;}
+  }
+  .button-control {
+    @extend .button-edit;
+    .btn {
+      width: 100px;
+      margin-left: 10px;
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+  .paragraph-img {max-width: 100%;}
+}
+
+.article-wrapper {
+  max-width: 960px;
+}
+
+.article-control {
+  margin-bottom: 40px;
+
+  &__header {
+
+  }
+
+  &__paragraph {
+    padding-left: 20px;
+  }
+
+  &__remarks {
+    padding-left: 40px;
+  }
+
+  &__remark-controls {
+    margin-top: 15px;
+    .btn {
+      margin-right: 10px;
+      &:last-of-type {margin-right: 0;}
+    }
+  }
+
+  .card {margin-bottom: 20px;}
+  .card-body {
+    p:last-of-type {margin-bottom: 0;}
+  }
+}
